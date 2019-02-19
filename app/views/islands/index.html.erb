@@ -11,3 +11,7 @@
 <% @islands.each do |island| %>
   <p> <%= island.name %> </p>
 <% end %>
+
+<% if policy(Island).create? %>
+  <%= link_to "Add New island", new_island_path %>
+<% end %>
