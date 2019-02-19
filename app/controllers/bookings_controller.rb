@@ -1,6 +1,10 @@
 class BookingsController < ApplicationController
   def index
     @user = current_user
+    authorize @user
+    # @user.bookings = policy_scope(Booking)
+    # @user.bookings = policy_scope(@user)
+    # @bookings = policy_scope(@booking)
   end
 
   def show
@@ -30,6 +34,10 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+
+  end
+
+  def dashboard
 
   end
 
