@@ -1,17 +1,66 @@
 <h1> All Islands</h1>
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6">
 
+<div class="container">
+  <div class="row cards">
+    <div class='cardz'>
+      <div class="card-content"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= image_path 'shutterisland.jpg' %>');">
+        <div class="card-category">New Scotland</div>
+        <div class="card-description">
+          <h2>Shutter Island</h2>
+          <p>Are you crazy enough for this adventure?</p>
+        </div>
+        <img class="card-user" src="<%= image_path 'logo.jpg' %>">
+      </div>
+        <div class="card-footer">
+          <p>Capacity : 15k</p>
+          <div class="card-controls">
+            <a href="#"><i class="fa fa-star" id="stardown"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="stardown"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+           </div>
+        </div>
+    </div>
+    <div class='cardz'>
+      <div class="card-content"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= image_path 'islanubar.jpg' %>');">
+        <div class="card-category">Pacific Ocean</div>
+        <div class="card-description">
+          <h2>Isla Nubar</h2>
+          <p>You better run fast !</p>
+        </div>
+        <img class="card-user" src="<%= image_path 'logo.jpg' %>">
+      </div>
+        <div class="card-footer">
+          <p>Capacity : 6k</p>
+          <div class="card-controls">
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+          </div>
+        </div>
+    </div>
+    <div class='cardz'>
+      <div class="card-content"style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= image_path 'alexanderisland.jpg' %>');">
+        <div class="card-category">Antartica</div>
+        <div class="card-description">
+          <h2>Alexander Island</h2>
+          <p>-50°, are you up for the challenge ?</p>
+        </div>
+        <img class="card-user" src="<%= image_path 'logo.jpg' %>">
+      </div>
+        <div class="card-footer">
+          <p>Capacity : 10</p>
+          <div class="card-controls">
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+            <a href="#"><i class="fa fa-star" id="star"></i></a></li>
+          </div>
+        </div>
     </div>
   </div>
-</div> -->
-
-<% @islands.each do |island| %>
-  <p> <%= island.name %> </p>
-<% end %>
-
-<% if policy(Island).create? %>
-  <%= link_to "Add New island", new_island_path %>
-<% end %>
+</div>
