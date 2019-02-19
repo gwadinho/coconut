@@ -7,10 +7,12 @@ class IslandsController < ApplicationController
 
   def new
     @island = Island.new
+    authorize @island
   end
 
   def show
     @island = Island.find(params[:id])
+    @booking = Booking.new
   end
 
   def create

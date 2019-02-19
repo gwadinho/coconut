@@ -1,10 +1,12 @@
-<h1> <%= @island.name %> </h1>
+<h1> Book <%= @island.name %> in <%= @island.location %>  </h1>
 
 
-<h3> Book <%= @island.name %> in <%= @island.location %>  </h3>
 
 <%= simple_form_for [@island, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :ending_date %>
   <%= f.submit "Book", class: "btn btn-primary" %>
 <% end %>
+
+
+
