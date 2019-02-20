@@ -1,6 +1,9 @@
 class BookingsController < ApplicationController
+  # skip_after_action :verify_policy_scoped, only: [ :index ]
   def index
-    @user = current_user
+    # @user = current_user
+    @bookings = current_user.bookings
+    @bookings = policy_scope(Booking)
   end
 
   def show
