@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
-User.destroy_all
-Island.destroy_all
 Booking.destroy_all
+Island.destroy_all
+User.destroy_all
 
 puts 'Creating users...'
 bob = User.create(
