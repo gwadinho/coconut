@@ -1,0 +1,46 @@
+.container-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-book {
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px;
+  background-color: #85B60F;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.container-show {
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 40px;
+  background-color: #F2EEEB;
+}
+.description-island {
+  padding: 30px;
+}
+
+.island-image {
+  border-radius: 30%;
+}
+
+.pic.crop {
+  border-radius: 5px;
+  border: white;
+}
+
+.buttin {
+  justify: center;
+  background-color: #F2EEEB;
+}
+
+.container-show h1 {
+  color: #5F2A01;
+  padding: 30px;
+}
+
+p {
+  color: black;
+}
