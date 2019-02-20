@@ -60,6 +60,114 @@ na = Island.create(
     user: bob
   )
 
+symi = Island.create(
+    name:     "Symi",
+    location: "Greece",
+    availability: "libre",
+    capacity: 15,
+    price: 1500,
+    user: bob
+  )
+
+cozumel = Island.create(
+    name:     "cozumel",
+    location: "Mexico",
+    availability: "libre",
+    capacity: 10,
+    price: 1000,
+    user: bob
+  )
+
+atoll = Island.create(
+    name:     "Atoll d'Ari",
+    location: "Maldives",
+    availability: "occupée",
+    capacity: 5,
+    price: 400,
+    user: bob
+  )
+
+koh = Island.create(
+    name:     "Koh Lipe",
+    location: "Thailand",
+    availability: "libre",
+    capacity: 10,
+    price: 800,
+    user: bob
+  )
+
+nacula = Island.create(
+    name:     "Nacula Island",
+    location: "Fidji Island",
+    availability: "libre",
+    capacity: 4,
+    price: 800,
+    user: bob
+  )
+
+san = Island.create(
+    name:     "San Blas",
+    location: "Panama",
+    availability: "libre",
+    capacity: 10,
+    price: 1000,
+    user: bob
+  )
+
+whitsundays = Island.create(
+    name:     "Whitsundays Island",
+    location: "Australia",
+    availability: "occupée",
+    capacity: 12,
+    price: 1200,
+    user: bob
+  )
+
+boracay = Island.create(
+    name:     "Boracay",
+    location: "Philipines",
+    availability: "libre",
+    capacity: 8,
+    price: 800,
+    user: bob
+  )
+
+pehrentian = Island.create(
+    name:     "Pehrentian",
+    location: "Malaysia",
+    availability: "libre",
+    capacity: 4,
+    price: 800,
+    user: bob
+  )
+
+komodo = Island.create(
+    name:     "Komodo",
+    location: "Indonesia",
+    availability: "libre",
+    capacity: 10,
+    price: 500,
+    user: bob
+  )
+
+nicobar = Island.create(
+    name:     "Nicobar Island",
+    location: "India",
+    availability: "libre",
+    capacity: 12,
+    price: 800,
+    user: bob
+  )
+
+gili = Island.create(
+    name:     "Gili Islands",
+    location: "Indonesia",
+    availability: "libre",
+    capacity: 10,
+    price: 800,
+    user: bob
+  )
+
 # puts 'Creating bookings...'
 # booking_1 = Booking.create(
 #   start_date: 01/07/2019,
