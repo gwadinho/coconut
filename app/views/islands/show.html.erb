@@ -1,12 +1,38 @@
-<h1> <%= @island.name %> </h1>
+<div class="container-show">
 
+  <div class="container-book">
+    <div class="island-image">
+      <h1> <%= @island.name %> </h1>
+      <h3> Book <%= @island.name %> in <%= @island.location %>  </h3>
 
-<h3> Book <%= @island.name %> in <%= @island.location %>  </h3>
+      <%= cl_image_tag @island.photo, height: 300, width: 400, crop: :fill %>
+    </div>
 
-<%= cl_image_tag @island.photo, height: 300, width: 400, crop: :fill %>
+    <div class="available">
+    <%= simple_form_for [@island, @booking] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :ending_date %>
+      <%= f.submit "Book", class: "btn btn-primary buttin" %>
+    <% end %>
+    </div>
+  </div>
 
-<%= simple_form_for [@island, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :ending_date %>
-  <%= f.submit "Book", class: "btn btn-primary" %>
-<% end %>
+  <div class="container-description">
+    <div class="header">
+      <h1>Marvellous stuffs about this island</h1>
+    </div>
+    <div class="description-island">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</div>
