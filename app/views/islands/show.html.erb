@@ -3,6 +3,8 @@
 
 <h3> Book <%= @island.name %> in <%= @island.location %>  </h3>
 
+<%= cl_image_tag @island.photo, height: 300, width: 400, crop: :fill %>
+
 <%= simple_form_for [@island, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :ending_date %>
