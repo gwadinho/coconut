@@ -1,10 +1,12 @@
 .cards {
     display: flex;
+    padding: 10px;
 }
 
 .cardz {
   flex: 1 1 auto;
-  margin: 10px;
+  padding: 7px;
+  margin: 6px;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
@@ -45,6 +47,7 @@
   font-size: 20px;
   margin-bottom: 0px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .card-description > p {
@@ -68,6 +71,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  color: black;
   background-color: #85B60F !important;
 }
 
