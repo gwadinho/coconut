@@ -5,30 +5,33 @@
 
   <!-- displayed on laptops -->
   <div class="navbar-lewagon-actions d-none d-sm-flex">
-    <form>
+    <!-- <form>
       <div class="question">
         <input type="text" required/>
         <label>Where to?</label>
       </div>
       <button>Let's go!</button>
-    </form>
+    </form> -->
+    <div class= "navbar-lewagon-link">
+        <%= link_to "All Islands", islands_path, class:"navbar-lewagon-link" %>
+    </div>
     <div class= "navbar-lewagon-link">
       <% if policy(Island).create? %>
         <%= link_to "Add New island", new_island_path, class:"navbar-lewagon-link" %>
       <% end %>
     </div>
-      <div class="badge-container">
-        <a href="#" class="navbar-lewagon-link"> My Bookings <span class="badge badge-pill badge-danger text-white" id="notif">5</span></a>
-      </div>
-      <div class="dropdown">
-        <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "dropdownMenuButton", 'data-toggle': "dropdown", 'aria-haspopup': "true", 'aria-expanded': "false" %>
-        <!-- <img src='.../assets/images/avatar.png' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/> -->
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Account</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Settings</a>
-            <%= link_to ("<i class='fas fa-sign-out-alt'></i> Logout").html_safe, destroy_user_session_path, :class => "dropdown-item", :method => :delete %>
-          </div>
-      </div>
+    <div class="badge-container">
+      <a href="/bookings" class="navbar-lewagon-link"> My Bookings <span class="badge badge-pill badge-danger text-white" id="notif"></span></a>
+    </div>
+    <div class="dropdown">
+      <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "dropdownMenuButton", 'data-toggle': "dropdown", 'aria-haspopup': "true", 'aria-expanded': "false" %>
+      <!-- <img src='.../assets/images/avatar.png' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/> -->
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Account</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Settings</a>
+          <%= link_to ("<i class='fas fa-sign-out-alt'></i> Logout").html_safe, destroy_user_session_path, :class => "dropdown-item", :method => :delete %>
+        </div>
+    </div>
   </div>
 
   <!-- displayed on phone / tablet -->
