@@ -3,6 +3,14 @@ class IslandsController < ApplicationController
 
   def index
     @islands = policy_scope(Island)
+    @islands = Island.where.not(latitude: nil, longitude: nil)
+    @markers = @islands.map do |island|
+      {
+        lng: island.longitude,
+        lat: island.latitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { island: island })
+      }
+    end
   end
 
   def new
