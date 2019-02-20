@@ -1,0 +1,8 @@
+<%= link_to island_path(island), :class => "link" do %>
+  <div class="infowindow">
+    <h5><%= island.name.capitalize %></h5>
+      <p><%= island.location %></p>
+      <div class="info-window-photo" style="background-image: url('<%= cl_image_path island.photo %>');">
+      </div>
+  </div>
+<% end %>
