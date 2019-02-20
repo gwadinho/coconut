@@ -1,9 +1,12 @@
 class BookingsController < ApplicationController
-  # skip_after_action :verify_policy_scoped, only: [ :index ]
+  skip_after_action :verify_policy_scoped, only: [ :index ]
+
   def index
-    # @user = current_user
-    @bookings = current_user.bookings
-    @bookings = policy_scope(Booking)
+    @user = current_user
+    # authorize @user
+    # # @user.bookings = policy_scope(Booking)
+    # # @user.bookings = policy_scope(@user)
+    # # @bookings = policy_scope(@booking)
   end
 
   def show
@@ -18,6 +21,7 @@ class BookingsController < ApplicationController
   def create
     @island = Island.find(params[:island_id])
     @booking = Booking.new(bookings_params)
+    authorize @booking
     @booking.island = @island
     @booking.user = current_user
     @booking.total_price = (@booking.ending_date - @booking.start_date)*@island.price
@@ -33,6 +37,10 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+
+  end
+
+  def dashboard
 
   end
 
