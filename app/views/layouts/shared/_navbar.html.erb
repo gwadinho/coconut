@@ -15,17 +15,21 @@
               <form class="card card-sm">
                   <div class="card-body row no-gutters align-items-center">
                       <div class="col-auto">
-                          <i class="fas fa-search h4 text-body"></i>
+                          <i class="fas fa-search h4 text-body" style="font-size:26px;"></i>
                       </div>
                       <!--end of col-->
                       <div class="col" style="display: flex;">
-                        <%= form_tag islands_path, method: :get do %>
-                          <%= text_field_tag :query,
-                            params[:query],
-                            class: "form-control form-control-lg form-control-borderless",
-                            placeholder: "'Gili island'"
-                          %>
-                          <%= submit_tag('Search', class: "btn btn-lg btn-success") %>
+                        <div id="mypadding">
+                          <%= form_tag islands_path, method: :get do %>
+                            <%= text_field_tag :query,
+                              params[:query],
+                              class: "form-control form-control-lg form-control-borderless",
+                              placeholder: "'Gili island'"
+                            %>
+                        </div>
+                        <div id="myform">
+                        <%= submit_tag('Search', class: "btn btn-lg btn-success mybtn") %>
+                        </div>
                         <% end %>
                       </div>
                       </div>
