@@ -2,15 +2,32 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @islands = policy_scope(Island)
-    @islands = Island.where.not(latitude: nil, longitude: nil)
-    @markers = @islands.map do |island|
-      {
-        lng: island.longitude,
-        lat: island.latitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { island: island })
-      }
-    end
+    # @islands = policy_scope(Island)
+      if params[:query].present?
+        sql_query = " \
+          islands.name @@ :query \
+          OR islands.location @@ :query \
+        "
+        @islands = policy_scope(Island).where(sql_query, query: "%#{params[:query]}%")
+        # @islands = Island.where(name: params[:query])
+        @markers = @islands.map do |island|
+          {
+            lng: island.longitude,
+            lat: island.latitude,
+            infoWindow: render_to_string(partial: "infowindow", locals: { island: island })
+          }
+        end
+      else
+        @islands = policy_scope(Island).where.not(latitude: nil, longitude: nil)
+        @markers = @islands.map do |island|
+          {
+            lng: island.longitude,
+            lat: island.latitude,
+            infoWindow: render_to_string(partial: "infowindow", locals: { island: island })
+          }
+        end
+      end
+
   end
 
   def new

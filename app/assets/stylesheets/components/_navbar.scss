@@ -121,3 +121,22 @@ input[type=text] {
   }
 }
 
+#myform {
+  margin-top: 8px !important;
+}
+
+#mypadding {
+  margin-right: 24px;
+  margin-left: 35px !important;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
