@@ -25,5 +25,38 @@
 }
 
 .mybtn {
-  height: 37px !important;
+  height: 32px !important;
+  background-color: rgb(107, 82, 64) !important;
 }
+
+.myformulaire {
+  margin: -31px -16px;
+  border-radius: 10px !important;
+  padding: 6px 0px;
+  margin-bottom: 10px;
+}
+
+.myallignement {
+  margin: -11px 37px !important;
+}
+
+#myform {
+  margin-top: 3px !important;
+}
+
+#mypadding {
+  margin-right: 22px;
+  margin-left: 25px !important;
+  min-width: 280px;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
