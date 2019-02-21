@@ -4,14 +4,45 @@
   </a>
 
   <!-- displayed on laptops -->
-  <div class="navbar-lewagon-actions d-none d-sm-flex">
-    <!-- <form>
-      <div class="question">
-        <input type="text" required/>
-        <label>Where to?</label>
+    <div class="navbar-lewagon-actions d-none d-sm-flex">
+
+    <div class="navbar-lewagon-link search">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <div class="container">
+        <br/>
+        <div class="row justify-content-center">
+<!--           <div class="col-12 col-md-10 col-lg-8"> -->
+              <form class="card card-sm">
+                  <div class="card-body row no-gutters align-items-center">
+                      <div class="col-auto">
+                          <i class="fas fa-search h4 text-body" style="font-size:26px;"></i>
+                      </div>
+                      <!--end of col-->
+                      <div class="col" style="display: flex;">
+                        <div id="mypadding">
+                          <%= form_tag islands_path, method: :get do %>
+                            <%= text_field_tag :query,
+                              params[:query],
+                              class: "form-control form-control-lg form-control-borderless",
+                              placeholder: "'Gili island'"
+                            %>
+                        </div>
+                        <div id="myform">
+                        <%= submit_tag('Search', class: "btn btn-lg btn-success mybtn") %>
+                        </div>
+                        <% end %>
+                      </div>
+                      </div>
+                      <!--end of col-->
+                      <!--end of col-->
+                  </div>
+              </form>
+<!--           </div> -->
+                            <!--end of col-->
+        </div>
       </div>
-      <button>Let's go!</button>
-    </form> -->
+
+
     <div class= "navbar-lewagon-link">
         <%= link_to "All Islands", islands_path, class:"navbar-lewagon-link" %>
     </div>
@@ -27,7 +58,7 @@
       <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "dropdownMenuButton", 'data-toggle': "dropdown", 'aria-haspopup': "true", 'aria-expanded': "false" %>
       <!-- <img src='.../assets/images/avatar.png' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/> -->
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Account</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-user"></i>Account</a>
           <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Settings</a>
           <%= link_to ("<i class='fas fa-sign-out-alt'></i> Logout").html_safe, destroy_user_session_path, :class => "dropdown-item", :method => :delete %>
         </div>
