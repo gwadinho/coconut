@@ -3,18 +3,19 @@
   align-items: center;
   justify-content: space-between;
   background: #F2EEEB;
-  padding: 16px 24px;
+  padding: 3px 18px;
   box-shadow: 0 2px 2px -2px #5F2A01;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid #5F2A01;
+  border-bottom: 1px solid #5F2A01;
+  font-family: 'Raleway', Georgia;
+  height: 90px;
 }
 
 .navbar-lewagon .brand {
   width: 100px;
-  border-radius: 50%;
-  border: 2px solid #5F2A01;
+  border-radius: 10%;
 }
 
 .navbar-lewagon .navbar-lewagon-actions {
@@ -26,8 +27,8 @@
   margin-left: 24px;
   color: #999999;
   font-size: 20px;
-  color: #85B60F;
-  font-family: 'Comfortaa', cursive;
+  color: #5F2A01;
+  font-family: 'Raleway', Georgia;
   text-decoration: none;
 }
 .navbar-lewagon .navbar-lewagon-actions .navbar-lewagon-link:hover {
@@ -50,6 +51,8 @@
 .avatar {
   width: 60px;
   border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
 }
 .avatar-large {
   width: 56px;
@@ -58,7 +61,7 @@
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4);
   border: white 1px solid;
 }
 .avatar-square {
