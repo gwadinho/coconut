@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   border-top: 2px solid #5F2A01;
@@ -25,18 +25,27 @@
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #D23333;
-  font-family: 'Comfortaa', cursive;
+  color: #5F2A01;
+  font-family: 'Raleway', Georgia;
   font-size: 24px;
-  color: #85B60F;
+  color: #5F2A01;
 }
 
 .footer-copyright {
-  color: #85B60F;
-  font-family: 'Comfortaa', cursive;
-  font-size: 18px;
+  padding-top: 8px;
+  margin-right: 220px
+}
+
+#nut {
+  font-size: 16px;
+  color: #5F2A01;
+  font-family: 'Raleway', Georgia;
+  text-decoration: none;
 }
 
 #coco {
-  color: #5F2A01;
+  font-size: 22px;
+  color: white;
+  font-family: 'Raleway', Georgia;
+  text-shadow: 2px 2px #5F2A01;
 }
