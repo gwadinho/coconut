@@ -1,18 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-        <br>
-        <h1> Add my island</h1>
+<div class="coco-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1544905840-729bfe3363b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9);">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+          <br>
+          <h1 id="add-island-title">Add my island</h1>
 
-        <%= simple_form_for(@island) do |f| %>
-          <%= f.input :name %>
-          <%= f.input :location %>
-          <%= f.input :capacity %>
-          <%= f.input :price %>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
-          <%= f.submit "Create Island", class: "btn btn-success" %>
-        <% end %>
+          <%= simple_form_for(@island) do |f| %>
+            <%= f.input :name %>
+            <%= f.input :location %>
+            <%= f.input :capacity %>
+            <%= f.input :price %>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit "Create Island", class: "btn btn-success add-island-btn" %>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
