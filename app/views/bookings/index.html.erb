@@ -1,8 +1,84 @@
-<h1>My bookings</h1>
+<div class="wrapper">
 
-<% @user.bookings.each do |booking| %>
-  <li>
-    <%= booking.total_price %> - status : enjoy the island
-  </li>
-<% end %>
+  <h1>My bookings</h1>
 
+  <div class="container">
+    <% @user.bookings.each do |booking| %>
+      <li>
+        <div class="booking-card">
+          <div class="booking-image">
+          <%= cl_image_tag booking.island.photo, width: 200, radius: 20 %>
+          </div>
+          <div class="booking-name">
+            <h3><%= booking.island.name %></h3>
+          </div>
+          <div class="booking-body">
+            <h3>
+              Country: <%= booking.island.location %>
+            </h3>
+          </div>
+          <div class="booking-status">
+            <h3 class="status pending">Pending</h3>
+            <h3 class="price"><%= booking.total_price %> €</h3>
+          </div>
+        </div>
+      </li>
+    <% end %>
+
+
+     <div class="booking-card">
+        <div class="booking-image">
+        <%= image_tag "Oleron.jpg", alt: "Île d'Oléron", width: 200, radius: 20 %>
+        </div>
+        <div class="booking-name">
+          <h3>Île d'Oléron</h3>
+        </div>
+        <div class="booking-body">
+          <h3>
+            Country: France
+          </h3>
+        </div>
+        <div class="booking-status">
+          <h3 class="status declined">Declined</h3>
+          <h3 class="price">5 500 €</h3>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <div class="booking-image">
+        <%= image_tag "marie-galante.jpg", alt: "Marie Galante", width: 200, radius: 20 %>
+        </div>
+        <div class="booking-name">
+          <h3>Marie Galante</h3>
+        </div>
+        <div class="booking-body">
+          <h3>
+            Country: France
+          </h3>
+        </div>
+        <div class="booking-status">
+          <h3 class="status accepted">Accepted</h3>
+          <h3 class="price">20 000 €</h3>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <div class="booking-image">
+        <%= image_tag "ile-de-france.png", alt: "Île de France", width: 200, radius: 20 %>
+        </div>
+        <div class="booking-name">
+          <h3>Île de France</h3>
+        </div>
+        <div class="booking-body">
+          <h3>
+            Country: France
+          </h3>
+        </div>
+        <div class="booking-status">
+          <h3 class="status accepted">Accepted</h3>
+          <h3 class="price">10 000 €</h3>
+        </div>
+      </div>
+
+  </div>
+</div>
