@@ -30,27 +30,31 @@
   opacity: 0.6;
 }
 
-.content {
+.description {
   position:absolute;
   top:0;
   left:0;
   z-index:1;
   padding-top: 25%;
   padding-left: 15%;
+  font-family: 'Raleway', Georgia;
 }
 
-h1 {
-  font-size: 28px;
+.title-h2 {
+  font-size: 62px;
   color: white;
-  font-family: 'Comfortaa', bold;
+  font-family: 'Raleway', 700, Georgia;
   text-align: left;
+  text-shadow: 4px 4px #5F2A01;
 }
 
 p {
-  font-size: 14px;
+  font-size: 20px;
   color: white;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Raleway', Georgia;
   text-align: left;
+  margin-left: 15px;
+  text-shadow: 1px 1px #5F2A01;
 }
 
 #myBtn {
