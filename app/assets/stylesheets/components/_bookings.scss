@@ -1,0 +1,87 @@
+.wrapper {
+  text-align: center;
+  h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: Padauk;
+    font-size: 44px;
+  }
+}
+
+.container {
+  margin-bottom: 20px;
+  li {
+    list-style: none;
+    margin: 10px 0px;
+  }
+}
+
+
+.booking-card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background-color: #FBFAF8;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.booking-image{
+  flex: 0 0 20%;
+  // background-image : linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+}
+
+.booking-name {
+  padding-left: 20px;
+  min-width: 100px;
+  h3 {
+    font-size: 24px;
+    margin-bottom: 0px;
+    font-family: Padauk;
+  }
+}
+
+
+.booking-body {
+  flex-grow: 1;
+  padding-left: 20px;
+  h3 {
+    font-size: 16px;
+    font-family: Padauk !important;
+    margin: 6px 0;
+    color: #5F2A01;
+  }
+}
+
+
+.booking-status {
+  padding-right: 20px;
+  h3 {
+  font-size: 24px;
+  font-family: Padauk !important;
+  font-weight: bold;
+  }
+}
+.status.accepted {
+  color: #04A366;
+}
+.status.declined {
+  color: red;
+}
+.status.pending {
+  color: orange;
+}
+
+
+
+// .message-name p {
+//   font-size: 13px;
+//   font-weight: lighter;
+//   opacity: 0.6;
+//   margin-top: 5px;
+// }
+
+// .message-body {
+//   padding-left: 20px;
+//   color: rgba(0,0,0,0.4);
+// }
