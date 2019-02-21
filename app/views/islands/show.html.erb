@@ -1,5 +1,7 @@
 <div class="container-show">
-
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
+<link href="https://fonts.googleapis.com/css?family=Montaga" rel="stylesheet">
   <div class="container-book">
     <div class="island-image">
       <h1> <%= @island.name %> </h1>
@@ -12,27 +14,32 @@
     <%= simple_form_for [@island, @booking] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :ending_date %>
-      <%= f.submit "Book", class: "btn btn-primary buttin" %>
+      <%= f.submit "Book", class: "btn btn-outline-primary btn-lg"%>
     <% end %>
     </div>
   </div>
 
   <div class="container-description">
     <div class="header">
-      <h1>Marvellous stuffs about this island</h1>
+      <h1>What about this island?</h1>
+      <p> This island is considered by many as, well, paradise. To the north lies Paradise Island. Its name tells you everything. It’s 685 acres of pure euphoria, developed almost exclusively to delight and accommodate visitors.
+      </p>
+
+      <p>In a nutshell, the best time to visit this island is during the drier shoulder seasons of May-June and September-October. Though this island is a year round travel destination that is always busy with tourists, two factors are key: the weather and the peak tourist seasons.
+      </p>
     </div>
+    <h1 class= "activities"> Good to know:</h1>
     <div class="description-island">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#"><i class="fas fa-wifi fa-5x"></i></a></li>
+          <a href="#"><i class="fas fa-fish fa-5x"></i></a></li>
+          <a href="#"><i class="fas fa-snowboarding fa-5x"></i></a></li>
+          <a href="#"><i class="fas fa-umbrella-beach fa-5x"></i></a></li>
+          <a href="#"><i class="fas fa-temperature-high fa-5x"></i></a></li>
     </div>
+    <div class="island-price">
+      <h1> Price: $ <%= @island.price %> per day </h1>
+    </div>
+    <div class="island-capacity">
+      <h1> For <%= @island.capacity %> people </h1>
   </div>
 </div>
