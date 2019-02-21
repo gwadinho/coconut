@@ -9,3 +9,127 @@
   text-decoration: none;
   color: black;
 }
+
+.coco-img {
+  background-image: url("https://images.unsplash.com/photo-1544905840-729bfe3363b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9");
+  height: 100vh;
+  background-size: cover;
+}
+
+// .devise-title {
+//   margin: 20px;
+//   text-align: center;
+//   color: #5F2A01;
+//   border-left: 2px solid #F2EEEB;
+//   border-right: 2px solid #F2EEEB;
+//   font-size: 28px;
+//   text-shadow: 1px 1px #F2EEEB;
+//   font-family: 'Raleway', Georgia;
+// }
+
+.formbk {
+  margin-top: 200px;
+}
+
+.form-inputs {
+  background-color: #F2EEEB;
+}
+
+.simple_form {
+  div.input {
+    margin-bottom: 10px;
+    clear: both;
+    /* Required for Webkit, but not for Gecko */
+  }
+  label {
+    float: left;
+    text-align: right;
+    margin: 0px 10px;
+    padding-left: 5px;
+    color: #F2EEEB;
+    font-size: 14px;
+    text-shadow: 1px 1px #5F2A01;
+    font-family: 'Raleway', Georgia;
+  }
+}
+
+div.boolean, .simple_form input[type='submit'] {
+  margin-left: 135px;
+  background-color: #F2EEEB;
+  color: #5F2A01;
+  font-family: 'Raleway', Georgia;
+  width: 80px;
+  border-color: white;
+  font-size: 16px;
+}
+
+div.boolean label {
+  float: none;
+  margin: 0;
+}
+
+label.collection_radio_buttons {
+  float: none;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: -2px;
+  margin-left: 2px;
+}
+
+.field_with_errors {
+  background-color: #ff3333;
+}
+
+.simple_form {
+  .error {
+    clear: left;
+    color: black;
+    display: block;
+    margin-left: 120px;
+  }
+  .hint {
+    clear: left;
+    margin-left: 120px;
+    color: #555;
+    display: block;
+    font-style: italic;
+  }
+}
+
+input {
+  &.radio {
+    margin-right: 5px;
+    vertical-align: -3px;
+  }
+  &.check_boxes {
+    margin-left: 3px;
+    vertical-align: -3px;
+  }
+}
+
+label.collection_check_boxes {
+  float: none;
+  margin: 0;
+  vertical-align: -2px;
+  margin-left: 2px;
+}
+
+a:-webkit-any-link {
+  color: #F2EEEB;
+  font-family: "Ubuntu";
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 1px 1px #5F2A01;
+  font-size: 12px;
+  text-align: right;
+}
+
+.form-check-input.is-valid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label {
+    color: #F2EEEB !important;
+}
+
+.coco-background {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
