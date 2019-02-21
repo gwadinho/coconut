@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+}
+
+.cards-container {
+  flex: 1 1 auto;
+  // background-color: rgb(244, 244, 244);
+  margin: 10px 10px;
+}
+
+#map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important;
+  margin: 10px 10px;
+
+}
