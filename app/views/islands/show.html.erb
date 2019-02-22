@@ -6,20 +6,22 @@
 
       <%= cl_image_tag @island.photo, height: 300, width: 400, crop: :fill %>
     </div>
+
     <div class="available">
-    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h2>Pick up dates</h2>
-    <%= simple_form_for [@island, @booking] do |f| %>
-      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker", id: "start"} %>
-      <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker", id: "end"} %>
-      <%= f.submit "Book", class: "btn btn-outline-primary btn-lg"%>
-    <% end %>
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+      <h2>Pick up dates</h2>
+      <%= simple_form_for [@island, @booking] do |f| %>
+        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker", id: "start"} %>
+        <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker", id: "end"} %>
+        <%= f.submit "Book", class: "btn btn-outline-primary btn-lg"%>
+      <% end %>
+      </div>
+      <div>
+        <h2 id="total_price"></h2>
+        <p id="island-price" style='display: none'><%= @island.price %></p>
+      </div>
     </div>
-    <div>
-      <p id="total_price"></p>
-      <p id="island-price" style='display: none'><%= @island.price %></p>
     </div>
-  </div>
   <div class="container-description">
     <div class="header">
       <h1>What about this island?</h1>
