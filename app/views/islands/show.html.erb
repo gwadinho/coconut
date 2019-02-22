@@ -1,7 +1,4 @@
 <div class="container-show">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
-<link href="https://fonts.googleapis.com/css?family=Montaga" rel="stylesheet">
   <div class="container-book">
     <div class="island-image">
       <h1> <%= @island.name %> </h1>
@@ -9,7 +6,6 @@
 
       <%= cl_image_tag @island.photo, height: 300, width: 400, crop: :fill %>
     </div>
-
     <div class="available">
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <h2>Pick up dates</h2>
@@ -24,29 +20,30 @@
       <p id="island-price" style='display: none'><%= @island.price %></p>
     </div>
   </div>
-
   <div class="container-description">
     <div class="header">
       <h1>What about this island?</h1>
-      <p> This island is considered by many as, well, paradise. To the north lies Paradise Island. Its name tells you everything. It’s 685 acres of pure euphoria, developed almost exclusively to delight and accommodate visitors.
-      </p>
+      <h2> This island is considered by many as, well, paradise. To the north lies Paradise Island. Its name tells you everything. It’s 685 acres of pure euphoria, developed almost exclusively to delight and accommodate visitors.
+      </h2>
 
-      <p>In a nutshell, the best time to visit this island is during the drier shoulder seasons of May-June and September-October. Though this island is a year round travel destination that is always busy with tourists, two factors are key: the weather and the peak tourist seasons.
-      </p>
+
+      <h2> In a nutshell, the best time to visit this island is during the drier shoulder seasons of May-June and September-October. Though this island is a year round travel destination that is always busy with tourists, two factors are key: the weather and the peak tourist seasons.
+      </h2>
     </div>
     <h1 class= "activities"> Good to know:</h1>
     <div class="description-island">
-          <a href="#"><i class="fas fa-wifi fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-fish fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-snowboarding fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-umbrella-beach fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-temperature-high fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-wifi fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-fish fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-snowboarding fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-umbrella-beach fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-temperature-high fa-5x"></i></a></li>
     </div>
     <div class="island-price">
       <h1> Price: $ <%= @island.price %> per day </h1>
     </div>
     <div class="island-capacity">
       <h1> For <%= @island.capacity %> people </h1>
+    </div>
   </div>
 </div>
 

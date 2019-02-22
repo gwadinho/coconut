@@ -58,7 +58,7 @@
     <div class="dropdown">
       <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "dropdownMenuButton", 'data-toggle': "dropdown", 'aria-haspopup': "true", 'aria-expanded': "false" %>
       <!-- <img src='.../assets/images/avatar.png' class="avatar dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/> -->
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-menu nav-ajust" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#"><i class="fas fa-user"></i>Account</a>
           <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Settings</a>
           <%= link_to ("<i class='fas fa-sign-out-alt'></i> Logout").html_safe, destroy_user_session_path, :class => "dropdown-item", :method => :delete %>

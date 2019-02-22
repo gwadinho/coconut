@@ -1,25 +1,31 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-      <h3>Forgot your password?</h3>
-        <br>
-        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-          <%= f.error_notification %>
-
-          <div class="form-inputs">
-            <%= f.input :email,
-                        required: true,
-                        autofocus: true,
-                        input_html: { autocomplete: "email" } %>
-          </div>
-
-          <div class="form-actions btn btn-info">
-            <%= f.button :submit, "Reset password" %>
-          </div>
+<div class="coco-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1544905840-729bfe3363b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9);">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <h3>Forgot your password?</h3>
           <br>
-          <br>
-          <%= render "devise/shared/links" %>
-        <% end %>
+          <div class="formbk">
+          <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <div class="bipbip">
+            <%= f.error_notification %>
+
+  <!--           <div class="form-inputs"> -->
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" } %>
+  <!--           </div> -->
+
+<!--             <div class="form-actions btn btn-info"> -->
+              <%= f.button :submit, "Reset" %>
+            </div>
+            <br>
+            <br>
+            <%= render "devise/shared/links" %>
+            </div>
+          <% end %>
+          </div>
+      </div>
     </div>
   </div>
 </div>
