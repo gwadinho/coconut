@@ -6,22 +6,21 @@
 
       <%= cl_image_tag @island.photo, height: 300, width: 400, crop: :fill %>
     </div>
-
     <div class="available">
-    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h2>Pick up dates</h2>
-    <%= simple_form_for [@island, @booking] do |f| %>
-      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.submit "Book", class: "btn btn-outline-primary btn-lg"%>
-    <% end %>
-    </div>
-    <div id="total_price">
-      <h3> Total price : </h3>
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <h2>Pick up dates</h2>
+        <%= simple_form_for [@island, @booking] do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.submit "Book", class: "btn btn-outline-primary btn-lg"%>
+        <% end %>
+      </div>
+      <div id="total_price">
+        <h3> Total price : </h3>
 
+      </div>
     </div>
   </div>
-
   <div class="container-description">
     <div class="header">
       <h1>What about this island?</h1>
@@ -34,11 +33,11 @@
     </div>
     <h1 class= "activities"> Good to know:</h1>
     <div class="description-island">
-          <a href="#"><i class="fas fa-wifi fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-fish fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-snowboarding fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-umbrella-beach fa-5x"></i></a></li>
-          <a href="#"><i class="fas fa-temperature-high fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-wifi fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-fish fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-snowboarding fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-umbrella-beach fa-5x"></i></a></li>
+      <a href="#"><i class="fas fa-temperature-high fa-5x"></i></a></li>
     </div>
     <div class="island-price">
       <h1> Price: $ <%= @island.price %> per day </h1>
