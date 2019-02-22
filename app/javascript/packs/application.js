@@ -7,5 +7,7 @@ import "../plugins/flatpickr";
 
 initMapbox();
 
+import { findPrice } from '../plugins/booking_price'
 
-import '../plugins/booking_price';
+findPrice()
+
