@@ -3,13 +3,40 @@
 * ------------------------------------- */
 
 .alert {
-  margin: 0;
-  text-align: center;
-  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
-.alert-info {
-  background: $green;
+
+.alert a {
+  color: #0E0000;
 }
+
+.alert-success {
+  border: 2px solid #1EDD88;
+}
+
+.alert-success a {
+  color: #1EDD88;
+}
+
 .alert-warning {
-  background: $red;
+  border: 2px solid #FFC65A;
+}
+
+.alert-warning a {
+  color: #FFC65A;
+}
+
+.alert-danger {
+  border: 2px solid #FD1015;
+}
+
+.alert-danger a {
+  color: #FD1015;
 }

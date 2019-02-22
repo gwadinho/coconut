@@ -25,23 +25,38 @@ class BookingsController < ApplicationController
     @booking.island = @island
     @booking.user = current_user
     @booking.total_price = (@booking.ending_date - @booking.start_date)*@island.price
-    if @booking.save
-      redirect_to bookings_path
-    else
-      render 'islands/show'
-    end
-    # Unless @restaurant.valid?, #save will return false,
-    # and @restaurant is not persisted.
-    # TODO: present the form again with error messages.
 
+    @date_start = @booking.start_date.strftime("%Y-%m-%d")
+    @date_end = @booking.ending_date.strftime("%Y-%m-%d")
+    found = false
+    @all_bookings = Booking.all
+    @all_bookings.each do |booking|
+      arrival_date = booking.start_date.strftime("%Y-%m-%d")
+      leave_date = booking.ending_date.strftime("%Y-%m-%d")
+      if @date_start.between?(arrival_date, leave_date) || @date_end.between?(arrival_date, leave_date)
+        if booking.island_id == @booking.island_id
+          found = true
+        end
+      end
+    end
+
+      # redirect_to islands_path
+    respond_to do |format|
+      if found == true
+        flash[:alert] = 'not booking'
+        format.html { redirect_to islands_path, :alert => 'Island unavailable for these dates, why not book another one ?' }
+      else
+        @booking.save
+        flash[:alert] = 'booking'
+        format.html { redirect_to bookings_path, :alert => 'Booking sent! Prepare your trip now' }
+      end
+    end
   end
 
   def destroy
-
   end
 
   def dashboard
-
   end
 
   private
@@ -49,5 +64,4 @@ class BookingsController < ApplicationController
   def bookings_params
     params.require(:booking).permit(:start_date, :ending_date)
   end
-
 end
