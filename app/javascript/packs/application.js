@@ -7,3 +7,5 @@ import "../plugins/flatpickr";
 
 initMapbox();
 
+
+import '../plugins/booking_price';
