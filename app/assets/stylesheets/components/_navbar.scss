@@ -103,6 +103,11 @@ input[type=text] {
   color: #999999;
 }
 
+.nav-ajust{
+  margin: -0.875rem -71px 11px !important;
+}
+
+
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 600px) {
   .search-container {
@@ -120,4 +125,6 @@ input[type=text] {
     border: 1px solid #ccc;
   }
 }
+
+
 
