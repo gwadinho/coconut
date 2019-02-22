@@ -31,7 +31,7 @@
   position: absolute;
   top: 15px;
   left: 15px;
-  font-size: 16px;
+  font-size: 16px !important;
   text-transform: uppercase;
   font-weight: lighter;
   opacity: 0.8;
@@ -43,8 +43,8 @@
   left: 10px;
 }
 
-.card-description > h2 {
-  font-size: 25px;
+.card-description > h2 a {
+  font-size: 20px !important;
   margin-bottom: 0px;
   font-weight: bold;
   text-decoration: none;
