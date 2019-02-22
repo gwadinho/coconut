@@ -8,14 +8,16 @@
     </div>
 
     <div class="available">
-      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-        <h2>Pick up dates</h2>
-        <%= simple_form_for [@island, @booking] do |f| %>
-          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.submit "Book", class: "btn btn-outline-primary btn-lg"%>
-        <% end %>
-      </div>
+    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Pick up dates</h2>
+    <%= simple_form_for [@island, @booking] do |f| %>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.submit "Book", class: "btn btn-outline-primary btn-lg"%>
+    <% end %>
+    </div>
+    <div id="total_price">
+      <h3> Total price : </h3>
     </div>
   </div>
 
@@ -45,3 +47,5 @@
     </div>
   </div>
 </div>
+
+
